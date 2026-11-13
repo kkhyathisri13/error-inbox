@@ -1,0 +1,16 @@
+{
+  "name": "error-inbox",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bounded error normalization and repository-maintenance tooling",
+  "type": "module",
+  "engines": {
+    "node": "^22.14.0 || ^24.0.0 || ^26.0.0"
+  },
+  "scripts": {
+    "test": "node --test --test-reporter=spec test/*.test.mjs",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-lines=90 --test-coverage-functions=90 --test-coverage-branches=85 --test-coverage-include=src/**/*.mjs --test-coverage-include=scripts/lib/**/*.mjs test/*.test.mjs",
+    "lint": "node scripts/lint.mjs",
+    "stats:update": "node scripts/update-project-stats.mjs"
+  }
+}
